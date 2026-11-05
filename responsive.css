@@ -1,0 +1,132 @@
+@media (max-width: 1020px) {
+  .advantage-grid,
+  .stats-grid,
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .package-grid,
+  .testimonial-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-layout,
+  .order-layout,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-card {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .search-card .btn {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 780px) {
+  .nav-toggle {
+    display: inline-block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4px;
+    padding: 14px 18px 18px;
+    background: rgba(253, 248, 243, 0.98);
+    border-bottom: 1px solid var(--sand);
+    box-shadow: var(--shadow);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a:not(.btn) {
+    padding: 12px 4px;
+    border-bottom: 1px solid rgba(213, 184, 166, 0.5);
+  }
+
+  .hero {
+    min-height: 92vh;
+    align-items: center;
+    padding-top: 36px;
+  }
+
+  .hero-copy {
+    max-width: none;
+  }
+
+  .search-card,
+  .package-grid,
+  .philosophy-grid,
+  .testimonial-grid,
+  .advantage-grid,
+  .gallery-grid,
+  .stats-grid,
+  .form-card {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding: 72px 0;
+  }
+
+  .about-photo,
+  .about-photo img,
+  .about-photo .img-fallback {
+    min-height: 260px;
+  }
+
+  .gallery-grid figure {
+    height: 200px;
+  }
+
+  .float-wa {
+    right: 14px;
+    bottom: 14px;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    width: min(var(--max), calc(100% - 28px));
+  }
+
+  .hero-actions,
+  .hero-actions .btn {
+    width: 100%;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .price {
+    font-size: 1.45rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .hero-slide,
+  .package-card,
+  .gallery-grid img,
+  .btn {
+    animation: none;
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
